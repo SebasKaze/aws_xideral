@@ -245,6 +245,39 @@
                 text-align: center;
             }
 
+.entries {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.entry-card {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    background: #fff;
+}
+
+.entry-title {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.entry-desc {
+    margin: 0 0 0.75rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.entry-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
             /* Responsive */
 
             @media (max-width: 560px) {
@@ -260,6 +293,10 @@
             .site-nav nav {
                 gap: 16px;
             }
+
+
+
+
         }
         </style>
     </head>
@@ -275,44 +312,50 @@
                 </nav>
             </div>
         </header>
-        <main id="top">
+            <main id="top">
 
-        <section class="hero">
-            <p class="hero-kicker">Portafolio</p>
-            <h1>Hilario Sebastian Espinoza Garcia</h1>
-            <p class="hero-text">
-                Bienvenidos! Soy Sebas, desarrollador full stack con 1 años de experiencia. He desarrollado
-                aplicaciones web para control de inventarios y servicios de almacenamiento. Tengo experiencia en
-                JS, TS, frameworks como; React y Node JS, Java, C++ y SQL. Asi como tambien diferentes metodologias agiles
-                como SCRUM o Kanban.
-            </p>
-        </section>
+                <section class="hero">
+                    <p class="hero-kicker">Portafolio</p>
+                    <h1>Hilario Sebastian Espinoza Garcia</h1>
+                    <p class="hero-text">
+                        Bienvenidos! Soy Sebas, desarrollador full stack con 1 años de experiencia. He desarrollado
+                        aplicaciones web para control de inventarios y servicios de almacenamiento. Tengo experiencia en
+                        JS, TS, frameworks como; React y Node JS, Java, C++ y SQL. Asi como tambien diferentes metodologias agiles
+                        como SCRUM o Kanban.
+                    </p>
+                </section>
 
-        <section class="listing" id="tareas" aria-labelledby="tareas-title">
-            <div class="listing-head">
-                <h2 id="tareas-title">Tareas</h2>
-                <p class="listing-note">Pronto.</p>
-            </div>
-            <ul class="entries" id="tareas-list"></ul>
-        </section>
+                <section class="listing" id="tareas" aria-labelledby="tareas-title">
+                    <div class="listing-head">
+                        <h2 id="tareas-title">Tareas</h2>
+                        <p class="listing-note">Trabajos entregados durante el curso.</p>
+                    </div>
+                    <ul class="entries" id="tareas-list">
+                        <li class="entry-card">
+                            <h3 class="entry-title">Tarea 1</h3>
+                            <p class="entry-desc">En esta tarea se vio la instalacion de Docker, Py, Jupyter, y otras herramientas claves para las proximas actividades.</p>
+                            <a class="entry-link" href="https://github.com/SebasKaze/aws_xideral/blob/main/T1.md" target="_blank" rel="noopener">Ver tarea</a>
+                        </li>
+                    </ul>
+                </section>
 
-        <section class="listing" id="ejercicios" aria-labelledby="ejercicios-title">
-            <div class="listing-head">
-                <h2 id="ejercicios-title">Ejercicios en clase</h2>
-                <p class="listing-note">Pronto</p>
-            </div>
-            <ul class="entries" id="ejercicios-list"></ul>
-        </section>
+                <section class="listing" id="ejercicios" aria-labelledby="ejercicios-title">
+                    <div class="listing-head">
+                        <h2 id="ejercicios-title">Ejercicios en clase</h2>
+                        <p class="listing-note">Pronto</p>
+                    </div>
+                    <ul class="entries" id="ejercicios-list"></ul>
+                </section>
 
-        <section class="listing" id="certificaciones" aria-labelledby="certificaciones-title">
-            <div class="listing-head">
-                <h2 id="certificaciones-title">Certificaciones</h2>
-                <p class="listing-note">Pronto</p>
-            </div>
-            <ul class="entries" id="certificaciones-list"></ul>
-        </section>
+                <section class="listing" id="certificaciones" aria-labelledby="certificaciones-title">
+                    <div class="listing-head">
+                        <h2 id="certificaciones-title">Certificaciones</h2>
+                        <p class="listing-note">Pronto</p>
+                    </div>
+                    <ul class="entries" id="certificaciones-list"></ul>
+                </section>
 
-        </main>
+            </main>
         <footer class="site-footer">
             <p>Sebastian Espinoza—Ingeniería en Sistemas Computacionales, ESCOM IPN</p>
             <p class="footer-meta">hilariosebastian.espinoza.garcia@gmail.com &nbsp; github.com/SebasKaze &nbsp; © 2026</p>
