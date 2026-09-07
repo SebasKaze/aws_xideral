@@ -1,1 +1,323 @@
-<p>Hola mundo</p>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sebastian — Portafolio</title>
+        <meta name="description" content="Portafolio de Sebastian, estudiante de Ingeniería en Sistemas Computacionales: tareas, ejercicios en clase y certificaciones.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            :root {
+                --bg: #f3f4f2;
+                --surface: #ffffff;
+                --ink: #14181c;
+                --muted: #5b6470;
+                --accent: #2f6f4f;
+                --line: #d9dcd6;
+
+                --font-display: "Space Grotesk", sans-serif;
+                --font-body: "Inter", sans-serif;
+                --font-mono: "IBM Plex Mono", monospace;
+
+                --content-width: 1400px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            * {
+                transition: none !important;
+            }
+            }
+
+            body {
+                margin: 0;
+                background: var(--bg);
+                color: var(--ink);
+                font-family: var(--font-body);
+                font-size: 16px;
+                line-height: 1.6;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            a {
+                color: inherit;
+            }
+
+            :focus-visible {
+                outline: 2px solid var(--accent);
+                outline-offset: 3px;
+            }
+            .site-nav {
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                background: var(--bg);
+                border-bottom: 1px solid var(--line);
+            }
+
+            .nav-inner {
+                max-width: var(--content-width);
+                margin: 0 auto;
+                padding: 20px 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .nav-name {
+                font-family: var(--font-display);
+                font-weight: 600;
+                font-size: 1.05rem;
+                text-decoration: none;
+            }
+
+            .site-nav nav {
+                display: flex;
+                gap: 24px;
+            }
+
+            .site-nav nav a {
+                text-decoration: none;
+                font-size: 0.95rem;
+                color: var(--muted);
+                border-bottom: 1px solid transparent;
+                padding-bottom: 2px;
+                transition: color 0.15s ease, border-color 0.15s ease;
+            }
+
+            .site-nav nav a:hover,
+            .site-nav nav a:focus-visible,
+            .site-nav nav a.active {
+            color: var(--ink);
+            border-bottom-color: var(--accent);
+            }
+
+            /* Hero */
+
+            .hero {
+                max-width: var(--content-width);
+                margin: 0 auto;
+                padding: 64px 24px 48px;
+                text-align: center;
+            }
+
+            .hero-kicker {
+                margin: 0 0 12px;
+                font-family: var(--font-mono);
+                font-size: 0.85rem;
+                color: var(--muted);
+            }
+
+            .hero h1 {
+                margin: 0 0 20px;
+                font-family: var(--font-display);
+                font-weight: 600;
+                font-size: clamp(2.4rem, 5vw, 3.2rem);
+                letter-spacing: -0.01em;
+            }
+
+            .hero-text {
+                margin: 0;
+                color: var(--ink);
+                font-size: 1.05rem;
+                text-align: center;
+            }
+
+            /* Listings */
+
+            .listing {
+                max-width: var(--content-width);
+                margin: 0 auto;
+                padding: 40px 24px;
+                border-top: 1px solid var(--line);
+                scroll-margin-top: 84px;
+            }
+
+            .listing-head {
+                margin-bottom: 24px;
+            }
+
+            .listing-head h2 {
+                margin: 0 0 8px;
+                font-family: var(--font-display);
+                font-weight: 600;
+                font-size: 1.5rem;
+            }
+
+            .listing-note {
+                margin: 0;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            .entries {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .entry {
+                display: grid;
+                grid-template-columns: 128px 1fr;
+                gap: 20px;
+                padding: 18px 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .entry:first-child {
+                border-top: 1px solid var(--line);
+            }
+
+            .entry-meta {
+                font-family: var(--font-mono);
+                font-size: 0.8rem;
+                color: var(--muted);
+                padding-top: 2px;
+            }
+
+            .entry-title {
+                margin: 0 0 4px;
+                font-weight: 500;
+                font-size: 1.02rem;
+            }
+
+            .entry-desc {
+                margin: 0;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            .entry-link {
+                display: inline-block;
+                margin-top: 8px;
+                font-size: 0.9rem;
+                color: var(--accent);
+                text-decoration: none;
+                border-bottom: 1px solid currentColor;
+            }
+
+            .entry-link:hover,
+            .entry-link:focus-visible {
+            color: var(--ink);
+            }
+
+            .entries-empty {
+                padding: 18px 0;
+                border-top: 1px solid var(--line);
+                border-bottom: 1px solid var(--line);
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            /* Footer */
+
+            .site-footer {
+                max-width: var(--content-width);
+                margin: 0 auto;
+                padding: 40px 24px 64px;
+                border-top: 1px solid var(--line);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .site-footer p {
+                margin: 0 0 6px;
+            }
+
+            .footer-meta {
+                font-family: var(--font-mono);
+                font-size: 0.8rem;
+                text-align: center;
+            }
+
+            /* Responsive */
+
+            @media (max-width: 560px) {
+            .entry {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .nav-inner {
+                padding: 16px 20px;
+            }
+
+            .site-nav nav {
+                gap: 16px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+
+        <header class="site-nav">
+            <div class="nav-inner">
+                <a class="nav-name" href="#top">Inicio</a>
+                <nav aria-label="Navegación principal">
+                    <a href="#tareas">Tareas</a>
+                    <a href="#ejercicios">Ejercicios</a>
+                    <a href="#certificaciones">Certificaciones</a>
+                </nav>
+            </div>
+        </header>
+        <main id="top">
+
+        <section class="hero">
+            <p class="hero-kicker">Portafolio</p>
+            <h1>Hilario Sebastian Espinoza Garcia</h1>
+            <p class="hero-text">
+                Bienvenidos! Soy Sebas, desarrollador full stack con 1 años de experiencia. He desarrollado
+                aplicaciones web para control de inventarios y servicios de almacenamiento. Tengo experiencia en
+                JS, TS, frameworks como; React y Node JS, Java, C++ y SQL. Asi como tambien diferentes metodologias agiles
+                como SCRUM o Kanban.
+            </p>
+        </section>
+
+        <section class="listing" id="tareas" aria-labelledby="tareas-title">
+            <div class="listing-head">
+                <h2 id="tareas-title">Tareas</h2>
+                <p class="listing-note">Pronto.</p>
+            </div>
+            <ul class="entries" id="tareas-list"></ul>
+        </section>
+
+        <section class="listing" id="ejercicios" aria-labelledby="ejercicios-title">
+            <div class="listing-head">
+                <h2 id="ejercicios-title">Ejercicios en clase</h2>
+                <p class="listing-note">Pronto</p>
+            </div>
+            <ul class="entries" id="ejercicios-list"></ul>
+        </section>
+
+        <section class="listing" id="certificaciones" aria-labelledby="certificaciones-title">
+            <div class="listing-head">
+                <h2 id="certificaciones-title">Certificaciones</h2>
+                <p class="listing-note">Pronto</p>
+            </div>
+            <ul class="entries" id="certificaciones-list"></ul>
+        </section>
+
+        </main>
+        <footer class="site-footer">
+            <p>Sebastian Espinoza—Ingeniería en Sistemas Computacionales, ESCOM IPN</p>
+            <p class="footer-meta">hilariosebastian.espinoza.garcia@gmail.com &nbsp; github.com/SebasKaze &nbsp; © 2026</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
