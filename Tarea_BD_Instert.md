@@ -15,51 +15,6 @@ CREATE TABLE peliculas_sebastian(
 );
 ```
 
-## CREATE TABLE
-Se usa CREATE TABLE para crear una tabla con los requerimientos necesarios
-```sql
-CREATE TABLE peliculas_sebastian(
-	id_peli INT AUTO_INCREMENT PRIMARY KEY,
-	titulo VARCHAR(255) NOT NULL,
-	genero VARCHAR(255) NOT NULL,
-	ano_estreno DATE NOT NULL,
-	duracion DECIMAL(4,1) NOT NULL,
-	calificacion INT NOT NULL,
-    clasi VARCHAR(255) NOT NULL
-	disponible BOOLEAN NOT NULL
-);
-```
-
-## CREATE TABLE
-Se usa CREATE TABLE para crear una tabla con los requerimientos necesarios
-```sql
-CREATE TABLE peliculas_sebastian(
-	id_peli INT AUTO_INCREMENT PRIMARY KEY,
-	titulo VARCHAR(255) NOT NULL,
-	genero VARCHAR(255) NOT NULL,
-	ano_estreno DATE NOT NULL,
-	duracion DECIMAL(4,1) NOT NULL,
-	calificacion INT NOT NULL,
-    clasi VARCHAR(255) NOT NULL
-	disponible BOOLEAN NOT NULL
-);
-```
-
-## CREATE TABLE
-Se usa CREATE TABLE para crear una tabla con los requerimientos necesarios
-```sql
-CREATE TABLE peliculas_sebastian(
-	id_peli INT AUTO_INCREMENT PRIMARY KEY,
-	titulo VARCHAR(255) NOT NULL,
-	genero VARCHAR(255) NOT NULL,
-	ano_estreno DATE NOT NULL,
-	duracion DECIMAL(4,1) NOT NULL,
-	calificacion INT NOT NULL,
-    clasi VARCHAR(255) NOT NULL
-	disponible BOOLEAN NOT NULL
-);
-```
-
 ## INSERT
 Se usa INSERT para insertar datos de prueba en base a la tabla creada
 ```sql
